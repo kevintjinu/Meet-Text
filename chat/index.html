@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +15,24 @@
       display: flex;
       justify-content: center;
     }
-    body
-{
-    background-image: url("../docbg.jpg");
-    background-size:cover;
-}
+
+    body {
+      background-image: url("../docbg.jpg");
+      background-size: cover;
+    }
 
     #message-container {
       width: 80%;
       max-width: 1200px;
       margin-top: 20px;
-      
+
     }
 
     #message-container div {
       background-color: #CCC;
       padding: 5px;
       margin-top: 20px;
-      
+
     }
 
     #message-container div:nth-child(2n) {
@@ -45,19 +46,20 @@
       background-color: white;
       max-width: 1200px;
       width: 80%;
-      height:5%;
+      height: 5%;
       border-width: 2px;
-      border-radius:150px;
+      border-radius: 150px;
       display: flex;
-      
+
     }
 
     #message-input {
       flex-grow: 1;
-      
+
     }
   </style>
 </head>
+
 <body>
   <div id="message-container"></div>
   <form id="send-container">
@@ -65,4 +67,5 @@
     <button type="submit" id="send-button">Send</button>
   </form>
 </body>
+
 </html>
