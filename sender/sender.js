@@ -1,4 +1,4 @@
-const webSocket = new WebSocket("ws://192.168.137.1:3000")
+const webSocket = new WebSocket("ws://127.0.0.1:3500")
 
 webSocket.onmessage = (event) => {
     handleSignallingData(JSON.parse(event.data))
@@ -104,4 +104,23 @@ let isVideo = true
 function muteVideo() {
     isVideo = !isVideo
     localStream.getVideoTracks()[0].enabled = isVideo
+}
+function endCall()
+{
+    window.opener = self;
+    window.close();
+}
+function sendmsg()
+{
+    document.getElementById('send').addEventListener('click', function () {
+        console.log("send button")  
+        var yourMessage = document.getElementById('yourMessage').value
+        peer.send(yourMessage)
+      })
+    
+      peer.on('data', function (data) {
+          console.log("data")
+        document.getElementById('messages').textContent += data + '\n'
+      })
+    
 }
