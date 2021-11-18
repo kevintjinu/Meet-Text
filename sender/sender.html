@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../style.css">
-        <title>Sender</title>
-    </head>
-    <body>
-        <div id="Position">
-            
-           <Center>
-            <input placeholder="Enter caller..."
-            type="text"
-            id="username-input" /><br><br> 
-    <button
-     
-      onclick="sendUsername()">Send</button>
-    <button onclick="startCall()">Start Call</button>
-           </Center>
-        
-        </div>
-        <div id="video-call-div">
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-            <video muted id="local-video" autoplay></video>
-            <video id="remote-video" autoplay></video>
-            <div class="call-action-div">
-                <button_icon onclick="muteVideo()">
-                    <span class="button__icon">
-                        <ion-icon name="videocam-outline"></ion-icon>                     </span>
-                </button_icon>
-                
-                <button_icon onclick="muteAudio()">
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <title>Sender</title>
+</head>
+
+<body>
+    <div id="Position">
+
+        <Center>
+            <input placeholder="Enter caller..." type="text" id="username-input" /><br><br>
+            <button onclick="sendUsername()">Send</button>
+            <button onclick="startCall()">Start Call</button>
+        </Center>
+
+    </div>
+    <div id="video-call-div">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <video muted id="local-video" autoplay></video>
+        <video id="remote-video" autoplay></video>
+        <div class="call-action-div">
+            <button_icon onclick="muteVideo()">
+                <span class="button__icon">
+                    <ion-icon name="videocam-outline"></ion-icon>
+                </span>
+            </button_icon>
+
+            <button_icon onclick="muteAudio()">
                 <span class="button__icon">
                     <ion-icon name="mic-outline"></ion-icon>
                 </span>
-                </button_icon>
-                <endbutton onclick="endCall()">
+            </button_icon>
+            <endbutton onclick="endCall()">
                 <span class="endbutton">
                     <ion-icon name="call-sharp"></ion-icon>
                 </span>
 
-                
-            </endbutton> 
-                 
+
+            </endbutton>
+
             <button_icon>
                 <a href="../chat/index.html" target="Blank">
                     <button>
@@ -52,14 +51,14 @@
             </button_icon>
         </div>
 
-         
-        
-           
-            
-           
 
-    
+
+
+
+
+
+
         <script src="./sender.js"></script>
-    </body>
+</body>
 
 </html>
